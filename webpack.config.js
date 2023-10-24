@@ -16,8 +16,9 @@ module.exports = {
     clean: true,
   },
   devServer: {
-    compress: true,
+    compress: false,
     port: 9000,
+    hot: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -40,9 +41,18 @@ module.exports = {
         },
       },
       {
-        test: /(\.css)$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
+          "sass-loader",
+        ],
       },
+      // {
+      //   test: /(\.css)$/,
+      //   use: [MiniCssExtractPlugin.loader, "css-loader"],
+      // },
       {
         test: /\.html$/,
         use: "html-loader",
@@ -52,16 +62,22 @@ module.exports = {
         use: ["file-loader"],
       },
       {
-        test: /\.(png|svg|jpg|gif|ico)$/i,
-        use: ["file-loader"],
+        test: /\.(png|svg|jpg|jpeg|gif|ico|gif)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "images/[name]-[hash][ext]",
+        },
+        // {
+        //   test: /\.(png|svg|jpg|jpeg|gif|ico|gif)$/i,
+        //   use: ["file-loader"],
+        // },
+        // {
+        //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        //   type: "asset/resource",
+        //   generator: {
+        //     filename: "images/[hash][text]",
+        //   },
       },
-      // {
-      //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
-      //   type: "asset/resource",
-      //   generator: {
-      //     filename: "images/[hash][text]",
-      //   },
-      // },
     ],
   },
 };

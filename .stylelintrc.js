@@ -3,5 +3,8 @@ module.exports = {
   plugins: ["stylelint-prettier", "stylelint-scss"],
   rules: {
     "prettier/prettier": true,
+    "no-invalid-position-at-import-rule": null,
+    "selector-class-pattern": null,
+    "no-descending-specificity": null,
   },
 };
