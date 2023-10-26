@@ -16,27 +16,29 @@ module.exports = {
     clean: true,
   },
   devServer: {
+    // publicPath: "/assets/", // here's the change
+    // contentBase: path.join(__dirname, 'dist'),
     compress: false,
     port: 9000,
-    hot: true,
+    // hot: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./src/pages/homePage.html"),
       filename: "index.html",
     }),
-    new HtmlWebpackPlugin({
-      filename: "categoryPage.html",
-      template: "src/pages/categoryPage.html",
-    }),
-    new HtmlWebpackPlugin({
-      filename: "articlePage.html",
-      template: "src/pages/articlePage.html",
-    }),
-    new HtmlWebpackPlugin({
-      filename: "contactPage.html",
-      template: "src/pages/contactPage.html",
-    }),
+    // new HtmlWebpackPlugin({
+    //   filename: "categoryPage.html",
+    //   template: "src/pages/categoryPage.html",
+    // }),
+    // new HtmlWebpackPlugin({
+    //   filename: "articlePage.html",
+    //   template: "src/pages/articlePage.html",
+    // }),
+    // new HtmlWebpackPlugin({
+    //   filename: "contactPage.html",
+    //   template: "src/pages/contactPage.html",
+    // }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "[name].[hash].css",
@@ -54,12 +56,7 @@ module.exports = {
       },
       {
         test: /\.(sa|sc|c)ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
-          "sass-loader",
-        ],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       // {
       //   test: /(\.css)$/,
