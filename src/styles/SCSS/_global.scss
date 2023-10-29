@@ -1,0 +1,9 @@
+@import "mixin";
+@import "vars";
+
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
+  background-color: $white;
+}
