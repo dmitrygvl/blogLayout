@@ -1,0 +1,47 @@
+.columns {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+}
+
+.containerBlogPosts {
+  padding: 1.5em 5em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.item {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.column-left {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.left-text {
+  padding: 15px 10px 30px;
+}
+
+.column-main {
+  padding-bottom: 30px;
+  width: 49%;
+}
+
+.section-main {
+  padding: 20px 40px 20px 20px;
+}
+
+.header-section-main {
+  font-size: 30px;
+}
+
+.column-right {
+  display: block;
+  width: 25%;
+}
