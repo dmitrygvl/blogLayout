@@ -27,18 +27,18 @@ module.exports = {
       template: path.resolve(__dirname, "./src/pages/homePage.html"),
       filename: "index.html",
     }),
-    // new HtmlWebpackPlugin({
-    //   filename: "categoryPage.html",
-    //   template: "src/pages/categoryPage.html",
-    // }),
-    // new HtmlWebpackPlugin({
-    //   filename: "articlePage.html",
-    //   template: "src/pages/articlePage.html",
-    // }),
-    // new HtmlWebpackPlugin({
-    //   filename: "contactPage.html",
-    //   template: "src/pages/contactPage.html",
-    // }),
+    new HtmlWebpackPlugin({
+      filename: "categoryPage.html",
+      template: "src/pages/categoryPage.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "articlePage.html",
+      template: "src/pages/articlePage.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "contactPage.html",
+      template: "src/pages/contactPage.html",
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "[name].[hash].css",
