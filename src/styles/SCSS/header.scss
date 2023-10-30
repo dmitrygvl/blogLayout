@@ -2,8 +2,10 @@
 @import "vars";
 
 .header {
-  padding: 1.5em 5em;
+  // padding: 1.5em 5em;
   // margin-bottom: 30px;
+  margin-top: 30px;
+  padding: 0 calc(50% - 590px);
 }
 
 .title_main {

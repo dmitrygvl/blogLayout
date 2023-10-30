@@ -1,47 +1,66 @@
-.columns {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1600px;
+.sectionHeading {
+  padding: 0 calc(50% - 590px);
+  margin-top: 30px;
+  margin-bottom: 32px;
 }
 
 .containerBlogPosts {
-  padding: 1.5em 5em;
+  padding: 0 calc(50% - 590px);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 100%;
 }
 
-.item {
-  font-size: 20px;
-  line-height: 30px;
-}
-
-.column-left {
-  width: 49%;
+.columnRecent {
+  width: 45%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
 }
 
-.left-text {
-  padding: 15px 10px 30px;
+.postCardBig {
+  display: flex;
+  flex-direction: column;
 }
 
-.column-main {
-  padding-bottom: 30px;
-  width: 49%;
-}
-
-.section-main {
-  padding: 20px 40px 20px 20px;
-}
-
-.header-section-main {
-  font-size: 30px;
-}
-
-.column-right {
+.postCardBig__info {
   display: block;
-  width: 25%;
+  margin-top: 32px;
+}
+
+.postCard {
+  display: flex;
+}
+
+.postCard__img {
+  margin-right: 24px;
+}
+
+.postCard__info {
+  display: block;
+  flex-direction: column;
+  margin-left: 24px;
+}
+
+.postCard__info-author {
+  color: #6941c6;
+}
+
+.postCard__info-heading {
+  color: #1a1a1a;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+
+.postCard__info-text {
+  color: #667085;
+}
+
+.postCard__info-item {
+  gap: 12px;
 }
