@@ -28,16 +28,16 @@ module.exports = {
       filename: "index.html",
     }),
     new HtmlWebpackPlugin({
-      filename: "categoryPage.html",
-      template: "src/pages/categoryPage.html",
+      filename: "posts.html",
+      template: "src/pages/posts.html",
     }),
     new HtmlWebpackPlugin({
-      filename: "articlePage.html",
-      template: "src/pages/articlePage.html",
+      filename: "article.html",
+      template: "src/pages/article.html",
     }),
     new HtmlWebpackPlugin({
-      filename: "contactPage.html",
-      template: "src/pages/contactPage.html",
+      filename: "newsletter.html",
+      template: "src/pages/newsletter.html",
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({

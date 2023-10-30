@@ -1,0 +1,41 @@
+subscribe-box {
+  padding: 0 calc(50% - 590px);
+  display: flex;
+  justify-content: center;
+}
+
+.subheading {
+  text-align: center;
+  color: #6941c6;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.headingFeedback {
+  color: #1a1a1a;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 60px; /* 125% */
+  letter-spacing: -0.96px;
+}
+
+.subscribe__text {
+  text-align: center;
+  color: #667085;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.privacy__text {
+  color: #c0c5d0;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
