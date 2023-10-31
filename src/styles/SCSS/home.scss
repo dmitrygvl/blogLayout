@@ -4,8 +4,14 @@
 .sectionHeading {
   padding: 0 calc(50% - 590px);
 
-  margin-top: 30px;
-  margin-bottom: 32px;
+  padding-top: 30px;
+  padding-bottom: 32px;
+  color: $black;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+
 }
 
 .recentPosts-box {
@@ -34,7 +40,8 @@
   }
 
   &__img {
-    max-width: 100%;
+    width: 384px;
+    height: 240px;
   }
   &__author {
     color: $purple;

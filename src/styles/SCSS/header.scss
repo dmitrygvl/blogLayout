@@ -18,12 +18,12 @@
   text-transform: uppercase;
   align-self: center;
 
-  border-top: 1px solid #1a1a1a;
   border-bottom: 1px solid #1a1a1a;
 }
 
 .menu {
-  margin-bottom: 30px;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 30px;
   display: flex;
   justify-content: flex-end;
   &__list {
