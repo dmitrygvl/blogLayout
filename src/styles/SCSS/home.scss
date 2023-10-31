@@ -2,10 +2,11 @@
 @import "vars";
 
 .sectionHeading {
+  display: block;
   padding: 0 calc(50% - 590px);
 
   padding-top: 30px;
-  padding-bottom: 32px;
+  padding-bottom: 30px;
   color: $black;
   font-size: 24px;
   font-style: normal;

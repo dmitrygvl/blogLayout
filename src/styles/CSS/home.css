@@ -1,7 +1,8 @@
 .sectionHeading {
+  display: block;
   padding: 0 calc(50% - 590px);
   padding-top: 30px;
-  padding-bottom: 32px;
+  padding-bottom: 30px;
   color: #1a1a1a;
   font-size: 24px;
   font-style: normal;
