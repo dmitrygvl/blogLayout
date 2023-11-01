@@ -1,10 +1,99 @@
 @import "vars";
+
+@mixin title__main-font {
+  font-size: 243.8px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  align-self: center;
+}
+
 @mixin font-link($color: $black) {
   color: $color;
-
-  // font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
+  line-height: 24px;
+}
+
+@mixin sectionHeading__font {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+@mixin postCard__heading-font {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+@mixin subheading__font {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+@mixin subscribe__heading {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: -0.96px;
+}
+
+@mixin subscribe__text-font {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+@mixin privacy__text-font {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+@mixin input {
+  padding: 12px 14px 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  background: $white;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+@mixin paragraph-font {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@mixin button {
+  border-radius: 8px;
+  border: 1px solid $purple;
+  background: $purple;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+@mixin post__heading {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+@mixin post__subheading {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
   line-height: 24px;
 }
