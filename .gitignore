@@ -1,8 +1,0 @@
-node_modules
-dist
-coverage
-.vscode/
-.history/
-.DS_Store
-src/.DS_Store
-.eslintcache
