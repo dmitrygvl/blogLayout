@@ -66,9 +66,10 @@ body {
 .title_main {
   display: block;
   text-align: center;
-  font-size: 243.8px;
-  font-style: normal;
+  color: #1a1a1a;
+  font-size: 235px;
   font-weight: 700;
+  font-style: normal;
   line-height: normal;
   text-transform: uppercase;
   align-self: center;

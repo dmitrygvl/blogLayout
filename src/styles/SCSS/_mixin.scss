@@ -1,9 +1,10 @@
 @import "vars";
 
 @mixin title__main-font {
-  font-size: 243.8px;
-  font-style: normal;
+  color: $black;
+  font-size: 235px;
   font-weight: 700;
+  font-style: normal;
   line-height: normal;
   text-transform: uppercase;
   align-self: center;
