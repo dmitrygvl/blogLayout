@@ -16,8 +16,6 @@ module.exports = {
     clean: true,
   },
   devServer: {
-    // publicPath: "/assets/", // here's the change
-    // contentBase: path.join(__dirname, 'dist'),
     compress: false,
     port: 9000,
     // hot: true,
@@ -58,10 +56,6 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
-      // {
-      //   test: /(\.css)$/,
-      //   use: [MiniCssExtractPlugin.loader, "css-loader"],
-      // },
       {
         test: /\.html$/,
         use: "html-loader",

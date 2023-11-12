@@ -1,5 +1,5 @@
-@import "mixin";
-@import "vars";
+@import url("mixin");
+@import url("vars");
 
 .footer {
   padding: 0 calc(50% - 590px);
@@ -8,23 +8,25 @@
 
   &__menu {
     border-top: $border;
-
     padding-top: 30px;
     display: flex;
     justify-content: center;
     gap: 14px;
+
     &-list {
       display: flex;
-
       flex-direction: row;
       gap: 14px;
     }
+
     &-item {
       display: inline-block;
     }
+
     &-copyright {
       @include font-link;
     }
+
     &-link {
       @include font-link;
 

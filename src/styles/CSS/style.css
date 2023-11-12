@@ -353,3 +353,55 @@ body {
   font-weight: 400;
   line-height: 24px;
 }
+
+.slider__box {
+  margin-top: 30px;
+  padding: 0 calc(50% - 590px);
+}
+
+.button {
+  width: 50px;
+  height: 100px;
+  border-radius: 60px;
+  border-color: 1px solid #1a1a1a;
+  background-color: rgb(121 125 127);
+  border-style: none;
+  font-size: 25px;
+  font-weight: 550;
+  text-align: center;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: rgb(56 58 59);
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.slider-ul {
+  padding: 0 20px;
+  margin: 0;
+  width: 100%;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.slider-li {
+  list-style: none;
+  padding: 0;
+}
+
+.slider-item {
+  display: none;
+}
+
+.active {
+  width: 100%;
+  display: block;
+}
