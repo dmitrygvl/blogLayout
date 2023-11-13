@@ -35,6 +35,7 @@ module.exports = {
     "no-shadow": "off",
     "no-plusplus": "off",
     "no-unused-vars": "off",
+    "no-unused-expressions": "off",
     "consistent-return": "off",
     "prefer-promise-reject-errors": "off",
     "no-await-in-loop": "off",
@@ -43,6 +44,6 @@ module.exports = {
     "jest/no-focused-tests": "error",
     "jest/no-identical-title": "error",
     "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error",
+    "jest/valid-expect": "off",
   },
 };

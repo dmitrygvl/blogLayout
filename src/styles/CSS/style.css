@@ -172,8 +172,7 @@ body {
   padding: 0 calc(50% - 590px);
   display: flex;
   flex-wrap: wrap;
-  column-gap: 32px;
-  row-gap: 48px;
+  gap: 48px 32px;
 }
 
 .postCard {
