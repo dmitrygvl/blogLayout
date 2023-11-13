@@ -16,14 +16,28 @@ module.exports = {
     clean: true,
   },
   devServer: {
+    // publicPath: "/assets/", // here's the change
+    // contentBase: path.join(__dirname, 'dist'),
     compress: false,
     port: 9000,
-    hot: true,
+    // hot: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "./src/index.html"),
+      template: path.resolve(__dirname, "./src/pages/home.html"),
       filename: "index.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "posts.html",
+      template: "src/pages/posts.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "article.html",
+      template: "src/pages/article.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "newsletter.html",
+      template: "src/pages/newsletter.html",
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
@@ -42,12 +56,7 @@ module.exports = {
       },
       {
         test: /\.(sa|sc|c)ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
-          "sass-loader",
-        ],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       // {
       //   test: /(\.css)$/,

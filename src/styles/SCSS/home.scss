@@ -1,0 +1,56 @@
+@import "mixin";
+@import "vars";
+
+.sectionHeading {
+  display: block;
+  padding: 0 calc(50% - 590px);
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: $black;
+
+  @include sectionHeading__font;
+}
+
+.recentPosts-box {
+  padding: 0 calc(50% - 590px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.allPosts-box {
+  padding: 0 calc(50% - 590px);
+
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 32px;
+  row-gap: 48px;
+}
+
+.postCard {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+
+  &__recent-info {
+    display: flex;
+  }
+
+  &__img {
+    width: 384px;
+    height: 240px;
+  }
+  &__author {
+    color: $purple;
+    padding-top: 32px;
+  }
+  &__heading {
+    @include font-link;
+    @include postCard__heading-font;
+  }
+  &__text {
+    color: $grey;
+    @include paragraph-font;
+  }
+}

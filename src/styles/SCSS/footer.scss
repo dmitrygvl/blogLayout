@@ -1,0 +1,36 @@
+@import "mixin";
+@import "vars";
+
+.footer {
+  padding: 0 calc(50% - 590px);
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__menu {
+    border-top: $border;
+
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    &-list {
+      display: flex;
+
+      flex-direction: row;
+      gap: 14px;
+    }
+    &-item {
+      display: inline-block;
+    }
+    &-copyright {
+      @include font-link;
+    }
+    &-link {
+      @include font-link;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
