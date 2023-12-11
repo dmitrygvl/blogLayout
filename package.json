@@ -8,12 +8,10 @@
     "lint": "prettier --check . && eslint . && stylelint \"**/*.css\"",
     "lint:fix": "prettier --write . && eslint . --fix  && stylelint \"**/*.css\" --fix",
     "prepare": "husky install",
-    "start": "webpack-dev-server --mode development --open",
+    "start": "webpack-dev-server --mode development",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "watch": "webpack --mode development --watch",
-    "sass-dev": "sass --watch --update --style=expanded src/styles/SCSS:src/styles/CSS",
-    "sass-prod": "sass --no-source-map --style=compressed src/styles/SCSS:src/styles/CSS"
+    "watch": "webpack --mode development --watch"
   },
   "keywords": [],
   "author": "",
