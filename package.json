@@ -62,12 +62,12 @@
   },
   "lint-staged": {
     "*.js": [
-      "prettier --write",
-      "eslint --fix"
+      "eslint --fix",
+      "prettier --write"
+      
     ],
-    "*.{css,md,yml}": "prettier --write",
-    "*.css": "stylelint --fix",
-    "**/*.scss": "stylelint --fix"
+    "*.{css,scss,md,yml, json, html}": "prettier . --write",
+    "*.{css, scss}": "stylelint --fix"
   },
   "dependencies": {
     "postcss-scss": "^4.0.9"
