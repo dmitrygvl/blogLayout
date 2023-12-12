@@ -37,6 +37,8 @@
   &__img {
     width: 384px;
     height: 240px;
+
+    @include image__border;
   }
 
   &__author {

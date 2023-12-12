@@ -1,46 +1,195 @@
 @import "mixin";
 @import "vars";
 
-.slider__box {
-  margin-top: 30px;
-  padding: 0 calc(50% - 590px);
-}
+// .slider {
+//   margin: 0 auto;
+//   width: 800px;
+//   height: 450px;
+//   background-color: rgb(182, 203, 222);
+// }
 
-.button {
-  @include slider__button;
+// .hidden {
+//   display: none;
+// }
 
-  &:hover {
-    cursor: pointer;
-    background-color: rgb(56 58 59);
-  }
-}
+// .slider {
+//   width: 500px;
+//   overflow: hidden;
+//   position: relative;
+//     margin-top: 30px;
+//   padding: 0 calc(50% - 590px);
+// }
+
+// .slider__line {
+//   display: flex;
+//   transition: all 1s;
+// }
+
+// .slider__img {
+//   width: 500px
+// }
+
+// .slider__btn-prev {
+//   position: absolute;
+//   left: 0px;
+//   top: 50%;
+//   transform: translateY(-50%) rotate(180deg);
+//   font-size: 30px;
+
+//   color: rgba(255, 255, 255, 0.849);
+//   background-color: transparent;
+//   border: 1px solid rgba(255, 255, 255, 0.849);
+//   line-height: 1;
+// }
+
+// .slider__btn-next {
+//   position: absolute;
+//   left: 0px;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   font-size: 30px;
+
+//   color: rgba(255, 255, 255, 0.849);
+//   background-color: transparent;
+//   border: 1px solid rgba(255, 255, 255, 0.849);
+//   line-height: 1;
+// }
+
+// .slider__btn-prev:hover, .slider__btn-next:hover {
+//   cursor: pointer;
+//   background-color: rgba(0, 0, 0, 0.541);
+// }
+
+// .slider__box {
+//   margin-top: 30px;
+//   padding: 0 calc(50% - 590px);
+// }
+
+// .button {
+//   @include slider__button;
+
+//   &:hover {
+//     cursor: pointer;
+//     background-color: rgb(56 58 59);
+//   }
+// }
+
+// .slider {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin: 0;
+//   padding: 0 20px;
+//   // transition: all 1s;
+
+//   &-ul {
+//     padding: 0 20px;
+//     margin: 0;
+//     width: 100%;
+//     margin-left: 30px;
+//     margin-right: 30px;
+//   }
+
+//   &-li {
+//     list-style: none;
+//     padding: 0;
+//   }
+
+//   &-item {
+//     display: none;
+//   }
+// }
+
+// .active {
+//   width: 100%;
+//   display: block;
+// }
+
+// .slider__box {
+//   margin-top: 30px;
+//   padding: 0 calc(50% - 590px);
+// }
 
 .slider {
-  display: flex;
-  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
   align-items: center;
-  margin: 0;
-  padding: 0 20px;
+  width: 800px;
+  height: 450px;
+  display: flex;
+  position: relative;
+  flex-flow: row nowrap;
+  gap: 2%;
+  padding: 0;
+  overflow: hidden;
 
-  &-ul {
-    padding: 0 20px;
-    margin: 0;
+  @include slider__border;
+
+  &__box {
+    margin-top: 30px;
+    padding: 0 calc(50% - 590px);
+  }
+
+  &__item {
+    position: relative;
+    height: 100%;
+    flex: 1 0 100%;
+    transition: transform 0.4s;
+    list-style-type: none;
+  }
+
+  &__image {
     width: 100%;
-    margin-left: 30px;
-    margin-right: 30px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
-  &-li {
-    list-style: none;
+  @mixin button-arrow($direction) {
+    position: absolute;
+    height: 100%;
+    width: 8%;
     padding: 0;
+    background-color: transparent;
+    border: none;
+    top: 0;
+
+    &-icon {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.5;
+    }
+
+    &:hover {
+      background: linear-gradient($direction, transparent 50%, mintcream);
+    }
+
+    &:hover &-icon {
+      opacity: 1;
+    }
   }
 
-  &-item {
-    display: none;
-  }
-}
+  &__left-arrow {
+    @include button-arrow(to left);
 
-.active {
-  width: 100%;
-  display: block;
+    left: 0;
+
+    &-icon {
+      background-image: url("../assets/img/left-arrow.png");
+    }
+  }
+
+  &__right-arrow {
+    @include button-arrow(to right);
+
+    right: 0;
+
+    &-icon {
+      background-image: url("../assets/img/right-arrow.png");
+    }
+  }
 }

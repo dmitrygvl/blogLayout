@@ -38,7 +38,16 @@
   }
 
   &__titleImage {
-    padding-bottom: 32px;
+    margin-bottom: 32px;
+
+    @include image__border;
+  }
+
+  &__image {
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    @include image__border;
   }
 
   &__content {

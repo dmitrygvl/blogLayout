@@ -1,4 +1,4 @@
 import "./styles/style.scss";
-import { initialize } from "./modules/sliderLogic";
+import { sliderInit } from "./modules/sliderInit";
 
-initialize(document.querySelectorAll(".slider"));
+sliderInit();
