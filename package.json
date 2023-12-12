@@ -5,8 +5,10 @@
   "private": true,
   "scripts": {
     "test": "jest",
-    "lint": "prettier --check . && eslint . && stylelint \"**/*.css\"",
-    "lint:fix": "prettier --write . && eslint . --fix  && stylelint \"**/*.css\" --fix",
+    "lint": "prettier --check . && eslint . && stylelint \"**/*.scss\"",
+    "lint:fix": "prettier --write . && eslint . --fix  && stylelint \"**/*.scss\" --fix",
+    "lint:scss": "stylelint \"src/**/*.scss\"",
+    "lint:scss:fix": "stylelint \"src/**/*.scss\" --fix",
     "prepare": "husky install",
     "start": "webpack-dev-server --mode development",
     "dev": "webpack --mode development",
@@ -65,8 +67,8 @@
       "eslint --fix",
       "prettier --write"
     ],
-    "*.{css,scss,md,yml, json, html}": "prettier . --write",
-    "*.{css, scss}": "stylelint --fix"
+    "*.{css, scss}": "stylelint --fix",
+    "*.{css,scss,md,yml, json, html}": "prettier . --write"
   },
   "dependencies": {
     "postcss-scss": "^4.0.9"
