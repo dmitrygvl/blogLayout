@@ -39,10 +39,16 @@ export default class Slider {
   }
 
   initializeSlides() {
+    if (!this.slider) return;
+
     for (const slide of this.slider.children) {
-      slide.classList.add("slider__item");
-      slide.firstElementChild.classList.add("slider__image");
-      this.slides.push(slide);
+      if (slide) {
+        slide.classList.add("slider__item");
+      }
+      if (slide.firstElementChild) {
+        slide.firstElementChild.classList.add("slider__image");
+        this.slides.push(slide);
+      }
     }
   }
 
@@ -97,4 +103,10 @@ export default class Slider {
 
     return button;
   }
+}
+
+export function sliderInit() {
+  const options = { gap: "7%", duration: "1s", interval: "10000" };
+  const carousel = new Slider(document.querySelector(".slider"), options);
+  carousel.initialize();
 }

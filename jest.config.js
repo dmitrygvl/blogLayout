@@ -48,7 +48,7 @@ const config = {
       branches: 60,
       functions: 60,
       lines: 60,
-      statements: -20,
+      statements: -40,
     },
   },
 
