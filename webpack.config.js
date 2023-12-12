@@ -16,8 +16,6 @@ module.exports = {
     clean: true,
   },
   devServer: {
-    // publicPath: "/assets/", // here's the change
-    // contentBase: path.join(__dirname, 'dist'),
     compress: false,
     port: 9000,
     // hot: true,
@@ -76,10 +74,6 @@ module.exports = {
           },
         ],
       },
-      // {
-      //   test: /(\.css)$/,
-      //   use: [MiniCssExtractPlugin.loader, "css-loader"],
-      // },
       {
         test: /\.html$/,
         use: "html-loader",
@@ -94,16 +88,6 @@ module.exports = {
         generator: {
           filename: "images/[name]-[hash][ext]",
         },
-        // {
-        //   test: /\.(png|svg|jpg|jpeg|gif|ico|gif)$/i,
-        //   use: ["file-loader"],
-        // },
-        // {
-        //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        //   type: "asset/resource",
-        //   generator: {
-        //     filename: "images/[hash][text]",
-        //   },
       },
     ],
   },
