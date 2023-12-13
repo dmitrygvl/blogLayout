@@ -1,0 +1,86 @@
+@import "mixin";
+@import "vars";
+
+.slider {
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  width: 800px;
+  height: 450px;
+  display: flex;
+  position: relative;
+  flex-flow: row nowrap;
+  gap: 2%;
+  padding: 0;
+  overflow: hidden;
+
+  @include slider__border;
+
+  &__box {
+    margin-top: 30px;
+    padding: 0 calc(50% - 590px);
+  }
+
+  &__item {
+    position: relative;
+    height: 100%;
+    flex: 1 0 100%;
+    transition: transform 0.4s;
+    list-style-type: none;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  @mixin button-arrow($direction) {
+    position: absolute;
+    height: 100%;
+    width: 8%;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    top: 0;
+
+    &-icon {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.5;
+    }
+
+    &:hover {
+      background: linear-gradient($direction, transparent 50%, mintcream);
+    }
+
+    &:hover &-icon {
+      opacity: 1;
+    }
+  }
+
+  &__left-arrow {
+    @include button-arrow(to left);
+
+    left: 0;
+
+    &-icon {
+      background-image: url("../assets/img/left-arrow.png");
+    }
+  }
+
+  &__right-arrow {
+    @include button-arrow(to right);
+
+    right: 0;
+
+    &-icon {
+      background-image: url("../assets/img/right-arrow.png");
+    }
+  }
+}

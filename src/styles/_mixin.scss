@@ -1,6 +1,6 @@
 @import "vars";
 
-@mixin title__main-font {
+@mixin titleMain {
   color: $black;
   font-size: 235px;
   font-weight: 700;
@@ -68,7 +68,7 @@
   border-radius: 8px;
   border: 1px solid #d0d5dd;
   background: $white;
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  box-shadow: 0 1px 2px 0 rgb(16 24 40 / 5%);
 }
 
 @mixin paragraph-font {
@@ -82,7 +82,7 @@
   border-radius: 8px;
   border: 1px solid $purple;
   background: $purple;
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  box-shadow: 0 1px 2px 0 rgb(16 24 40 / 5%);
 }
 
 @mixin post__heading {
@@ -97,4 +97,16 @@
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
+}
+
+@mixin slider__border {
+  border-radius: 7px;
+  border: 1px solid $lightgrey;
+  box-shadow: 0 0 7px $lightgrey;
+}
+
+@mixin image__border {
+  border-radius: 4px;
+  border: 1px solid $lightgrey;
+  box-shadow: 0 0 7px $lightgrey;
 }

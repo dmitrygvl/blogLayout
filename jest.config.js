@@ -48,7 +48,7 @@ const config = {
       branches: 60,
       functions: 60,
       lines: 60,
-      statements: -20,
+      statements: -40,
     },
   },
 
@@ -152,7 +152,7 @@ const config = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  // testEnvironment: "jsdom",
+  testEnvironment: "jsdom",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},

@@ -9,7 +9,8 @@
 .title_main {
   display: block;
   text-align: center;
-  @include title__main-font;
+
+  @include titleMain;
 
   border-bottom: 1px solid #1a1a1a;
 }
@@ -19,15 +20,19 @@
   padding-bottom: 30px;
   display: flex;
   justify-content: flex-end;
+
   &__list {
     display: flex;
     flex-direction: row;
     gap: 14px;
+
     &-item {
       display: inline-block;
     }
+
     &-link {
       @include font-link;
+
       &:hover {
         text-decoration: underline;
       }

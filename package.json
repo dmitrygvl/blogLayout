@@ -5,15 +5,15 @@
   "private": true,
   "scripts": {
     "test": "jest",
-    "lint": "prettier --check . && eslint . && stylelint \"**/*.css\"",
-    "lint:fix": "prettier --write . && eslint . --fix  && stylelint \"**/*.css\" --fix",
+    "lint": "prettier --check . && eslint . && stylelint \"**/*.scss\"",
+    "lint:fix": "prettier --write . && eslint . --fix  && stylelint \"**/*.scss\" --fix",
+    "lint:scss": "stylelint \"src/**/*.scss\"",
+    "lint:scss:fix": "stylelint \"src/**/*.scss\" --fix",
     "prepare": "husky install",
-    "start": "webpack-dev-server --mode development --open",
+    "start": "webpack-dev-server --mode development",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "watch": "webpack --mode development --watch",
-    "sass-dev": "sass --watch --update --style=expanded src/styles/SCSS:src/styles/CSS",
-    "sass-prod": "sass --no-source-map --style=compressed src/styles/SCSS:src/styles/CSS"
+    "watch": "webpack --mode development --watch"
   },
   "keywords": [],
   "author": "",
@@ -44,29 +44,33 @@
     "jest-transform-stub": "^2.0.0",
     "lint-staged": "^15.0.1",
     "mini-css-extract-plugin": "^2.7.6",
+    "postcss": "^8.4.31",
     "postcss-import": "^15.1.0",
     "postcss-loader": "^7.3.3",
-    "postcss-preset-env": "^9.2.0",
+    "postcss-preset-env": "^9.3.0",
     "prettier": "^3.0.3",
     "puppeteer": "^21.5.1",
     "puppeteer-core": "^21.5.1",
     "sass": "^1.69.5",
     "sass-loader": "^13.3.2",
-    "stylelint": "^15.10.3",
+    "stylelint": "^15.11.0",
     "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^11.1.0",
     "stylelint-prettier": "^4.0.2",
-    "stylelint-scss": "^5.2.1",
+    "stylelint-scss": "^5.3.1",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
   },
   "lint-staged": {
     "*.js": [
-      "prettier --write",
-      "eslint --fix"
+      "eslint --fix",
+      "prettier --write"
     ],
-    "*.{css,md,yml}": "prettier --write",
-    "*.css": "stylelint --fix",
-    "**/*.scss": "stylelint --fix"
+    "*.{css, scss}": "stylelint --fix",
+    "*.{css,scss,md,yml, json, html}": "prettier . --write"
+  },
+  "dependencies": {
+    "postcss-scss": "^4.0.9"
   }
 }
